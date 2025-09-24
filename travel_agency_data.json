@@ -1,0 +1,284 @@
+{
+  "company_info": {
+    "name": "Happy Miles Travel and Tours Pvt. Ltd.",
+    "tagline": "Explore Nepal's Wonders - Your Journey, Our Passion",
+    "description": "Premier travel agency specializing in Buddhist pilgrimage, Hindu religious tours, and thrilling adventure activities across Nepal",
+    "services": [
+      "Tour Packages (Buddhist, Hindu, Adventure)",
+      "Flight & Train Ticketing",
+      "Vehicle Rental (Bus, Mini Bus, 4x4, Car)",
+      "Visa Assistance & Documentation",
+      "Travel Insurance",
+      "Trekking & Hiking Guides",
+      "Hotel & Accommodation Booking"
+    ]
+  },
+  "buddhist_packages": [
+    {
+      "name": "Sacred Buddhist Circuit",
+      "duration": "7 Days / 6 Nights",
+      "highlights": [
+        "Lumbini - Buddha's Birthplace",
+        "Boudhanath Stupa",
+        "Swayambhunath",
+        "Namobuddha",
+        "Kopan Monastery"
+      ],
+      "price_from": "USD 650",
+      "difficulty": "Easy",
+      "best_time": "Oct-May"
+    },
+    {
+      "name": "Himalayan Buddhist Pilgrimage",
+      "duration": "10 Days / 9 Nights",
+      "highlights": [
+        "Muktinath Temple",
+        "Tibetan Monasteries",
+        "Upper Mustang",
+        "Lo Manthang",
+        "Meditation Retreats"
+      ],
+      "price_from": "USD 1,200",
+      "difficulty": "Moderate",
+      "best_time": "Mar-Nov"
+    },
+    {
+      "name": "Complete Buddhist Heritage Tour",
+      "duration": "14 Days / 13 Nights",
+      "highlights": [
+        "All major Buddhist sites",
+        "Meditation sessions",
+        "Monastery visits",
+        "Cultural immersion",
+        "Spiritual guidance"
+      ],
+      "price_from": "USD 1,650",
+      "difficulty": "Easy-Moderate",
+      "best_time": "Oct-May"
+    }
+  ],
+  "hindu_packages": [
+    {
+      "name": "Char Dham Yatra Nepal",
+      "duration": "8 Days / 7 Nights",
+      "highlights": [
+        "Pashupatinath Temple",
+        "Muktinath Temple",
+        "Janakpurdham",
+        "Manakamana Temple",
+        "Gosainkunda Lake"
+      ],
+      "price_from": "USD 750",
+      "difficulty": "Moderate",
+      "best_time": "Mar-May, Sep-Nov"
+    },
+    {
+      "name": "Sacred Hindu Pilgrimage",
+      "duration": "12 Days / 11 Nights",
+      "highlights": [
+        "Halesi Mahadev",
+        "Pathibhara Devi",
+        "Dakshinkali",
+        "Changu Narayan",
+        "Religious ceremonies"
+      ],
+      "price_from": "USD 950",
+      "difficulty": "Moderate",
+      "best_time": "Oct-May"
+    },
+    {
+      "name": "Divine Heritage Circuit",
+      "duration": "6 Days / 5 Nights",
+      "highlights": [
+        "Kathmandu temples",
+        "Bhaktapur Durbar Square",
+        "Patan temples",
+        "Spiritual rituals",
+        "Cultural experiences"
+      ],
+      "price_from": "USD 550",
+      "difficulty": "Easy",
+      "best_time": "Year-round"
+    }
+  ],
+  "adventure_packages": [
+    {
+      "name": "Ultimate Nepal Adventure",
+      "duration": "14 Days / 13 Nights",
+      "highlights": [
+        "Everest Base Camp Trek",
+        "Bungee Jumping",
+        "White Water Rafting",
+        "Paragliding",
+        "Jungle Safari"
+      ],
+      "price_from": "USD 2,200",
+      "difficulty": "Challenging",
+      "best_time": "Mar-May, Sep-Nov"
+    },
+    {
+      "name": "Adrenaline Rush Package",
+      "duration": "7 Days / 6 Nights",
+      "highlights": [
+        "Bungee Jumping",
+        "Canyon Swinging",
+        "Zip Lining",
+        "Mountain Biking",
+        "Rock Climbing"
+      ],
+      "price_from": "USD 800",
+      "difficulty": "Moderate-Hard",
+      "best_time": "Oct-May"
+    },
+    {
+      "name": "Himalayan Trekking Adventure",
+      "duration": "12 Days / 11 Nights",
+      "highlights": [
+        "Annapurna Circuit",
+        "Ghorepani Poon Hill",
+        "Natural hot springs",
+        "Mountain villages",
+        "Sunrise views"
+      ],
+      "price_from": "USD 1,100",
+      "difficulty": "Moderate",
+      "best_time": "Mar-May, Sep-Dec"
+    },
+    {
+      "name": "Water & Wildlife Safari",
+      "duration": "8 Days / 7 Nights",
+      "highlights": [
+        "Chitwan Jungle Safari",
+        "Trishuli River Rafting",
+        "Elephant rides",
+        "Rhino spotting",
+        "Canoe rides"
+      ],
+      "price_from": "USD 650",
+      "difficulty": "Easy-Moderate",
+      "best_time": "Oct-Apr"
+    }
+  ],
+  "vehicle_rental": [
+    {
+      "type": "Tourist Bus (35-45 seats)",
+      "features": [
+        "AC",
+        "Comfortable seating",
+        "Professional driver",
+        "Insurance included"
+      ],
+      "price_per_day": "USD 150-200"
+    },
+    {
+      "type": "Mini Bus (15-20 seats)",
+      "features": [
+        "AC",
+        "Music system",
+        "Experienced driver",
+        "Fuel included"
+      ],
+      "price_per_day": "USD 100-130"
+    },
+    {
+      "type": "4x4 Jeep/SUV",
+      "features": [
+        "Off-road capable",
+        "Mountain terrain suitable",
+        "Driver included",
+        "Insurance covered"
+      ],
+      "price_per_day": "USD 80-120"
+    },
+    {
+      "type": "Private Car (Sedan)",
+      "features": [
+        "AC",
+        "Comfortable for families",
+        "City & highway travel",
+        "Professional driver"
+      ],
+      "price_per_day": "USD 60-80"
+    }
+  ],
+  "visa_info": {
+    "tourist_visa": {
+      "15_days": "USD 30",
+      "30_days": "USD 50",
+      "90_days": "USD 125"
+    },
+    "visa_on_arrival": "Available at Tribhuvan International Airport",
+    "requirements": [
+      "Passport valid for 6+ months",
+      "2 passport photos",
+      "Completed application form",
+      "Payment in USD"
+    ],
+    "free_visa": [
+      "SAARC citizens (30 days)",
+      "Chinese nationals",
+      "Children under 10"
+    ]
+  },
+  "popular_destinations": [
+    {
+      "name": "Lumbini",
+      "category": "Buddhist",
+      "description": "Birthplace of Lord Buddha, UNESCO World Heritage Site"
+    },
+    {
+      "name": "Pashupatinath",
+      "category": "Hindu",
+      "description": "Sacred Shiva temple, UNESCO World Heritage Site"
+    },
+    {
+      "name": "Everest Base Camp",
+      "category": "Adventure",
+      "description": "World's highest mountain base camp trekking"
+    },
+    {
+      "name": "Chitwan National Park",
+      "category": "Adventure",
+      "description": "Wildlife safari, rhinos, tigers, elephants"
+    },
+    {
+      "name": "Pokhara",
+      "category": "Adventure",
+      "description": "Lakes, paragliding, bungee jumping, mountain views"
+    },
+    {
+      "name": "Muktinath",
+      "category": "Both Hindu & Buddhist",
+      "description": "Sacred temple at 3,710m altitude"
+    }
+  ],
+  "blog_topics": [
+    "Best Time to Visit Nepal for Different Activities",
+    "Buddhist Pilgrimage Sites: A Complete Guide",
+    "Hindu Temples and Sacred Sites in Nepal",
+    "Adventure Activities in Nepal: Ultimate Guide",
+    "Nepal Visa Requirements and Documentation",
+    "Trekking in Nepal: Beginner's Guide",
+    "Cultural Festivals of Nepal",
+    "Nepal Travel Tips for First-Time Visitors",
+    "Photography Guide for Nepal Tours",
+    "Sustainable Tourism in Nepal"
+  ],
+  "seo_keywords": [
+    "Nepal tour packages",
+    "Buddhist pilgrimage Nepal",
+    "Hindu temples Nepal",
+    "Adventure tourism Nepal",
+    "Nepal trekking packages",
+    "Lumbini tour",
+    "Everest Base Camp trek",
+    "Nepal travel agency",
+    "Kathmandu sightseeing",
+    "Pokhara adventure",
+    "Nepal visa requirements",
+    "Chitwan safari",
+    "Nepal cultural tours",
+    "Himalayan trekking",
+    "Nepal holiday packages"
+  ]
+}
