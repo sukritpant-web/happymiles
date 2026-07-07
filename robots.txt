@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://happymiles.com.np/sitemap.xml
