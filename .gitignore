@@ -15,6 +15,7 @@ CHANGES.md
 *.draft.md
 notes/
 TODO.md
+font-preview.html
 
 # --- Archives & backups ---
 *.zip
