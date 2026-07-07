@@ -8,7 +8,9 @@ Thumbs.db
 desktop.ini
 
 # --- Working / planning docs (not part of the shipped site) ---
-recommendation.md
+recommendation*.md
+INTERNATIONAL-SEO-PLAN.md
+images-plan.md
 CHANGES.md
 *.draft.md
 notes/
@@ -43,3 +45,5 @@ yarn-error.log*
 
 # Note: docs/img/ (logo files) is intentionally NOT ignored — the site needs it.
 .claude
+
+img/photos/

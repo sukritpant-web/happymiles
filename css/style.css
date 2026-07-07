@@ -186,7 +186,9 @@ p  { max-width: 65ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 1.8rem; }
 .hero-note { font-size: .92rem; color: var(--navy-soft); display: flex; align-items: center; gap: .5rem; }
 .hero-art { position: relative; display: grid; place-items: center; }
-.hero-art img { width: min(78%, 340px); filter: drop-shadow(0 26px 34px rgba(26,44,73,.22)); animation: drop .9s cubic-bezier(.2,.8,.2,1) both; }
+.hero-photo { position: relative; width: min(90%, 400px); margin: 0; animation: drop .9s cubic-bezier(.2,.8,.2,1) both; }
+.hero-photo > img:not(.hero-photo-badge) { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius-lg); box-shadow: 0 34px 54px -26px rgba(26,44,73,.55); }
+.hero-photo-badge { position: absolute; left: -16px; bottom: -16px; width: 74px; height: auto; filter: drop-shadow(0 8px 14px rgba(26,44,73,.3)); }
 
 @keyframes drop { from { opacity: 0; transform: translateY(-22px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -352,6 +354,40 @@ p  { max-width: 65ch; }
 .footer-legal .reg { max-width: 70ch; line-height: 1.7; }
 .footer-legal .reg strong { color: #C6CFDE; font-weight: 600; }
 
+/* --- Discover Nepal photo grid ----------------------------------------- */
+.discover-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.tile { position: relative; margin: 0; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--shadow-sm); }
+.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.tile:hover img { transform: scale(1.06); }
+.tile figcaption {
+  position: absolute; inset: auto 0 0 0; padding: 1.6rem 1rem .9rem; color: #fff;
+  font-weight: 600; display: flex; align-items: center; gap: .55rem;
+  background: linear-gradient(to top, rgba(20,24,31,.82), rgba(20,24,31,0));
+}
+.tile figcaption::before {
+  content: ""; flex: none; width: 11px; height: 11px; border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg); background: var(--yellow); border: 2px solid #fff;
+}
+
+/* --- Photo variant of the split-art block ------------------------------ */
+.split-art--photo { padding: 0; min-height: 340px; display: flex; align-items: flex-end; }
+.split-art--photo .split-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.split-art--photo::before {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(150deg, rgba(26,44,73,.85), rgba(26,44,73,.5));
+}
+.split-art--photo::after { display: none; }
+.split-art--photo .quote { position: relative; z-index: 2; padding: clamp(2rem,5vw,3.5rem); }
+
+/* --- Photo backdrop for interior page headers -------------------------- */
+.page-hero--photo { position: relative; overflow: hidden; }
+.page-hero--photo .page-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.page-hero--photo::before {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(26,44,73,.93), rgba(26,44,73,.72));
+}
+.page-hero--photo .wrap { position: relative; z-index: 2; }
+
 /* --- Reveal animation -------------------------------------------------- */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
@@ -360,10 +396,14 @@ p  { max-width: 65ch; }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-art { order: -1; }
-  .hero-art img { width: min(52%, 220px); }
+  .hero-photo { width: min(66%, 280px); }
   .paths, .docs-grid, .steps { grid-template-columns: 1fr; }
+  .discover-grid { grid-template-columns: repeat(2, 1fr); }
   .values, .split, .contact-grid, .form-row, .footer-top { grid-template-columns: 1fr; }
   .footer-top { gap: 2rem; }
+}
+@media (max-width: 560px) {
+  .discover-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .nav-toggle { display: block; }
