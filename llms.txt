@@ -19,7 +19,8 @@
 - Registered with the Office of the Company Registrar, Nepal.
 - Registered for PAN with the Inland Revenue Department, Nepal.
 - Licensed by the Bagmati Province Department of Tourism and Culture.
-- Documents are published at https://happymiles.com.np/verification.html
+- Registration, PAN and licence numbers are shown in the website footer;
+  verification documents are available on request via info@happymiles.com.np.
 
 ## What we offer
 - Custom, made-to-order travel packages for each individual customer (no fixed
@@ -36,6 +37,5 @@
 ## Pages
 - Home: https://happymiles.com.np/
 - About: https://happymiles.com.np/about.html
-- Verification & credentials: https://happymiles.com.np/verification.html
 - Partner with us: https://happymiles.com.np/partners.html
 - Contact: https://happymiles.com.np/contact.html

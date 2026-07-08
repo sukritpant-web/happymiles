@@ -59,7 +59,6 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="verification.html">Verification</a></li>
           <li><a href="partners.html">Partner with us</a></li>
           <li><a href="contact.html" aria-current="page">Contact</a></li>
           <li class="nav-cta"><a class="btn btn--primary" href="#enquiry">Plan your trip</a></li>
@@ -112,20 +111,20 @@
           <h2 style="margin-bottom:1.4rem;">Tell us what you need.</h2>
 
           <div class="note-card" style="margin-bottom:1.5rem;">
-            <p><strong>Heads up:</strong> this form isn't wired up to send yet — it's coming soon. In the meantime, please email
+            <p><strong>Prefer to reach us directly?</strong> Email
             <a href="mailto:info@happymiles.com.np" style="color:var(--navy-deep);text-decoration:underline;">info@happymiles.com.np</a>
-            or call <a href="tel:+9779765340335" style="color:var(--navy-deep);text-decoration:underline;">+977 9765340335</a>.</p>
+            or call <a href="tel:+9779765340335" style="color:var(--navy-deep);text-decoration:underline;">+977 9765340335</a> — or just fill in the form below.</p>
           </div>
 
-          <form class="form" aria-label="Enquiry form">
+          <form class="form" id="enquiry-form" action="send-enquiry.php" method="post" aria-label="Enquiry form">
             <div class="form-row">
               <div class="field">
                 <label for="name">Your name</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Sita Sharma">
+                <input type="text" id="name" name="name" autocomplete="name" required maxlength="100" placeholder="e.g. Sita Sharma">
               </div>
               <div class="field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
               </div>
             </div>
             <div class="field">
@@ -140,11 +139,17 @@
             </div>
             <div class="field">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us about your trip idea or how you'd like to work together…"></textarea>
+              <textarea id="message" name="message" required maxlength="5000" placeholder="Tell us about your trip idea or how you'd like to work together…"></textarea>
+            </div>
+            <!-- Honeypot: hidden from people, catches spam bots -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
             </div>
             <div>
-              <button type="submit" class="btn btn--primary btn--lg" disabled aria-disabled="true" title="Form submission coming soon">Send enquiry (coming soon)</button>
+              <button type="submit" class="btn btn--primary btn--lg">Send enquiry</button>
             </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -163,7 +168,6 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
-            <li><a href="verification.html">Verification</a></li>
             <li><a href="partners.html">Partner with us</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -179,7 +183,7 @@
         </div>
       </div>
       <div class="footer-legal">
-        <p class="reg">Happy Miles Tours and Travels Pvt. Ltd. is registered with the <strong>Office of the Company Registrar</strong> and the <strong>Inland Revenue Department (PAN)</strong>, and is licensed by the <strong>Bagmati Province Department of Tourism and Culture</strong>.</p>
+        <p class="reg">Happy Miles Tours and Travels Pvt. Ltd. is registered with the <strong>Office of the Company Registrar</strong> (Reg. No. 376364/82/83), the <strong>Inland Revenue Department</strong> (PAN 622456812), and licensed by the <strong>Bagmati Province Department of Tourism and Culture</strong> (Licence No. 4767/082/083). <a href="contact.html">Contact us</a> for our verification documents.</p>
         <p>&copy; <span id="year">2026</span> Happy Miles Tours and Travels Pvt. Ltd.</p>
       </div>
     </div>

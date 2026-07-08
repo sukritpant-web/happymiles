@@ -336,6 +336,11 @@ p  { max-width: 65ch; }
 }
 .field textarea { min-height: 140px; resize: vertical; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.hp-field { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+.form-status { margin: .2rem 0 0; font-weight: 600; }
+.form-status:empty { display: none; }
+.form-status.is-ok { color: #1a7f4b; }
+.form-status.is-err { color: #b3261e; }
 
 /* --- Footer ------------------------------------------------------------ */
 .site-footer { background: var(--navy-deep); color: #C6CFDE; padding: clamp(3rem,6vw,4.5rem) 0 2rem; }
@@ -353,6 +358,7 @@ p  { max-width: 65ch; }
 }
 .footer-legal .reg { max-width: 70ch; line-height: 1.7; }
 .footer-legal .reg strong { color: #C6CFDE; font-weight: 600; }
+.footer-legal .reg a { color: var(--yellow); text-decoration: underline; text-underline-offset: 2px; }
 
 /* --- Discover Nepal photo grid ----------------------------------------- */
 .discover-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }

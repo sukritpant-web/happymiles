@@ -33,6 +33,39 @@
   var year = document.getElementById("year");
   if (year) { year.textContent = String(new Date().getFullYear()); }
 
+  // Enquiry form — submit via fetch and show an inline status (falls back to a
+  // normal POST to send-enquiry.php if JS is unavailable).
+  var form = document.getElementById("enquiry-form");
+  if (form) {
+    var statusEl = document.getElementById("form-status");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      if (statusEl) { statusEl.className = "form-status"; statusEl.textContent = ""; }
+      if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = "Sending…"; }
+      fetch(form.action, {
+        method: "POST",
+        headers: { "X-Requested-With": "XMLHttpRequest", "Accept": "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          if (res.ok && res.d && res.d.ok) {
+            form.reset();
+            if (statusEl) { statusEl.className = "form-status is-ok"; statusEl.textContent = res.d.message || "Thank you — your message has been sent."; }
+          } else {
+            if (statusEl) { statusEl.className = "form-status is-err"; statusEl.textContent = (res.d && res.d.message) || "Something went wrong. Please email info@happymiles.com.np."; }
+          }
+        })
+        .catch(function () {
+          if (statusEl) { statusEl.className = "form-status is-err"; statusEl.textContent = "Network error. Please email info@happymiles.com.np directly."; }
+        })
+        .finally(function () {
+          if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || "Send enquiry"; }
+        });
+    });
+  }
+
   // Reveal-on-scroll (respects reduced-motion via CSS)
   var reveals = document.querySelectorAll(".reveal");
   if (reveals.length && "IntersectionObserver" in window) {
